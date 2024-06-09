@@ -160,6 +160,12 @@ main {
     background-color: var(--orange1);
 }
 
+#pokemon-wrapper {
+    min-height: 200px;
+}
+
+/* Table stuff */
+
 /* Footer */
 footer {
 
