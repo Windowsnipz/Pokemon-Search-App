@@ -101,8 +101,12 @@ main {
     margin-top: 50px; /* margin below navbar */
 }
 
-/* Input-wrapper */
-#input-wrapper {
+.section h1, .section p {
+    margin-bottom: 20px;
+}
+
+/* pokemon-wrapper */
+#pokemon-wrapper {
     border: 2px solid var(--orange1);
     border-radius: 30px;
     width: 50%;
@@ -112,32 +116,46 @@ main {
     background-color: var(--gray2);
 }
 
-#input-wrapper h4 {
+#pokemon-wrapper h4 {
     padding: 10px 0;
 }
 
-#quote-btn {
-    display: block;
-    margin: 5px auto;
-    padding: 8px;
-    font-family: Helvetica, sans-serif;
-    /*font-weight: 900;*/
-    font-size: large;
+#input-div {
+    display: flex;
+    justify-content: center;
+}
+
+#txt-input {
     border-radius: 5px;
-    border: 1px solid var(--gray1);
+    border: none;
+    height: 25px;
+    padding: 5px;
+    margin: 0 5px;
+    margin-top: 2px;
+}
+
+#search-btn {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px;
+    height: 40px;
+    font-family: Helvetica, sans-serif;
+    font-size: large;
+    border-radius: 10px;
+    border: 2px solid var(--orange1);
     color: var(--blue1);
-    background-color: var(--gray1);
+    background-color: var(--gray2);
     transition: color 0.2s, background-color 0.2s;
 }
 
-#quote-btn:hover {
+#search-btn:hover {
     cursor: pointer;
     color: var(--gray1);
     background-color: var(--blue1);
     transition: color 0.2s, background-color 0.2s;
 }
 
-#quote-btn:active {
+#search-btn:active {
     color: var(--orange1);
     background-color: var(--orange1);
 }
