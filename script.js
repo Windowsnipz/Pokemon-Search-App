@@ -2,12 +2,21 @@ const input = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-button');
 
 
-searchBtn.addEventListener('click', () => {
+document.getElementById('search-form').addEventListener('submit', (event) => {
+    event.preventDefault(); // prevent reload on submit
     const query = input.value.toLowerCase();
     fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${query}`)
         .then((response) => {
             if(!response.ok) {
-                throw new Error('Network response was not ok');
+                alert("Pokémon not found");
             }
+            return response.json(); // parse JSON
         })
-});
+        .then((data) => {
+            populateStats(data);
+        })
+});   
+
+function populateStats(data) {
+    console.log(data);
+}

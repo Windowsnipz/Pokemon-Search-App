@@ -24,10 +24,12 @@
             <div class="section">
                 <h1>Pokémon Search App</h1>
                 <p>Search Pokémon by Name or ID:</p>
-                <div id="input-div">
-                    <input id="search-input" type="text" autocomplete="off">
-                    <button id="search-button">Search</button>
-                </div>
+                <form id="search-form">
+                    <div id="input-div">
+                        <input id="search-input" type="text" autocomplete="off" required>
+                        <button id="search-button">Search</button>
+                    </div>
+                </form>
                 <div class="info" id="pokemon-wrapper">
                     <h4><span id="pokemon-name"></span><span id="pokemon-id"></span></h4>
                     <p><span id="weight"></span><span id="height"></span></p>
