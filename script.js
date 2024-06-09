@@ -23,14 +23,23 @@ function populateStats(data) {
     const idText = document.getElementById('pokemon-id');
     const weightText = document.getElementById('weight');
     const heightText = document.getElementById('height');
+    const imgDiv = document.getElementById('img-div');
     const typeText = document.getElementById('types');
     const statSlots = document.querySelectorAll('.stat');
 
-    const { name, id, weight, height, types, stats } = data;
+    const { name, id, weight, height, sprites, types, stats } = data;
+    const { front_default } = sprites; // front_default is the default pokemon sprite
 
     // Display name and id
     nameText.textContent = name.toUpperCase();
     idText.textContent = `#${id}`;
+
+    // Display weight and height
+    weightText.textContent = `Weight: ${weight}`;
+    heightText.textContent = `Height: ${height}`;
+
+    // Display avatar
+    imgDiv.innerHTML = `<img alt="${name}-sprite" src="${front_default}">`
 
     // Display pokemon types
     typeText.textContent = `${types.length > 1 ? types[0].type.name.toUpperCase() + " " + types[1].type.name.toUpperCase() : types[0].type.name.toUpperCase()}`;    
