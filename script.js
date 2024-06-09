@@ -1,6 +1,6 @@
 const input = document.getElementById('search-input');
 const searchBtn = document.getElementById('search-button');
-const statSlots = document.querySelectorAll('.stat');
+
 
 
 document.getElementById('search-form').addEventListener('submit', (event) => {
@@ -19,10 +19,20 @@ document.getElementById('search-form').addEventListener('submit', (event) => {
 });   
 
 function populateStats(data) {
+    const nameText = document.getElementById('pokemon-name');
+    const idText = document.getElementById('pokemon-id');
+    const weightText = document.getElementById('weight');
+    const heightText = document.getElementById('height');
+    const typeText = document.getElementById('types');
+    const statSlots = document.querySelectorAll('.stat');
+
     const { name, id, weight, height, types, stats } = data;
 
+    // Display name and id
+    nameText.textContent = name.toUpperCase();
+    idText.textContent = `#${id}`;
+
     // Display pokemon types
-    const typeText = document.getElementById('types');
     typeText.textContent = `${types.length > 1 ? types[0].type.name.toUpperCase() + " " + types[1].type.name.toUpperCase() : types[0].type.name.toUpperCase()}`;    
 
     // Display pokemon stats
