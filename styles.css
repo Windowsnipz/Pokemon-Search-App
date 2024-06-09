@@ -127,7 +127,7 @@ main {
     justify-content: center;
 }
 
-#txt-input {
+#search-input {
     border-radius: 5px;
     border: none;
     height: 25px;
@@ -136,7 +136,7 @@ main {
     margin-top: 2px;
 }
 
-#search-btn {
+#search-button {
     display: inline-block;
     margin: 0 5px;
     padding: 8px;
@@ -150,14 +150,14 @@ main {
     transition: color 0.2s, background-color 0.2s;
 }
 
-#search-btn:hover {
+#search-button:hover {
     cursor: pointer;
     color: var(--gray1);
     background-color: var(--blue1);
     transition: color 0.2s, background-color 0.2s;
 }
 
-#search-btn:active {
+#search-button:active {
     color: var(--orange1);
     background-color: var(--orange1);
 }
