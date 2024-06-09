@@ -169,7 +169,7 @@ main {
 /* Table stuff */
 table {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 th {
