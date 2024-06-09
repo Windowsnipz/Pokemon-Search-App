@@ -16,6 +16,9 @@ document.getElementById('search-form').addEventListener('submit', (event) => {
         .then((data) => {
             populateStats(data);
         })
+        .catch((error) => {
+            console.error('There was a problem with the fetch operation');
+        })
 });   
 
 function populateStats(data) {
