@@ -166,6 +166,19 @@ main {
     min-height: 200px;
 }
 
+#pokemon-name {
+    font-size: large;
+}
+
+#pokemon-id {
+    font-weight: 100;
+}
+
+#wh {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #img-div {
     margin: auto;
     width: fit-content;
