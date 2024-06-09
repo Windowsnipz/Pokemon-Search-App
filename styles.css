@@ -105,8 +105,8 @@ main {
     margin-bottom: 20px;
 }
 
-/* pokemon-wrapper */
-#pokemon-wrapper {
+/* info class */
+.info {
     border: 2px solid var(--orange1);
     border-radius: 30px;
     width: 50%;
@@ -116,7 +116,7 @@ main {
     background-color: var(--gray2);
 }
 
-#pokemon-wrapper h4 {
+.info h4 {
     padding: 10px 0;
 }
 
@@ -158,10 +158,6 @@ main {
 #search-btn:active {
     color: var(--orange1);
     background-color: var(--orange1);
-}
-
-#result-text {
-    margin: auto 50px;
 }
 
 /* Footer */
