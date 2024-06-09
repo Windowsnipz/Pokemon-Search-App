@@ -5,6 +5,7 @@ const searchBtn = document.getElementById('search-button');
 
 document.getElementById('search-form').addEventListener('submit', (event) => {
     event.preventDefault(); // prevent reload on submit
+    clearPreviousData();
     const query = input.value.toLowerCase();
     fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${query}`)
         .then((response) => {
@@ -53,4 +54,24 @@ function populateStats(data) {
     }
 
     console.log(data);
+}
+
+function clearPreviousData() {
+    const nameText = document.getElementById('pokemon-name');
+    const idText = document.getElementById('pokemon-id');
+    const weightText = document.getElementById('weight');
+    const heightText = document.getElementById('height');
+    const imgDiv = document.getElementById('img-div');
+    const typeText = document.getElementById('types');
+    const statSlots = document.querySelectorAll('.stat');
+
+    nameText.textContent = '';
+    idText.textContent = '';
+    weightText.textContent = '';
+    heightText.textContent = '';
+    imgDiv.innerHTML = '';
+    typeText.textContent = '';
+    for (let slot of statSlots) {
+        slot.textContent = '';
+    }
 }
