@@ -46,7 +46,12 @@ function populateStats(data) {
     imgDiv.innerHTML = `<img id="sprite" alt="${name}-sprite" src="${front_default}">`
 
     // Display pokemon types
-    typeText.textContent = `${types.length > 1 ? types[0].type.name.toUpperCase() + " " + types[1].type.name.toUpperCase() : types[0].type.name.toUpperCase()}`;    
+    if (types.length === 1) {
+        typeText.innerHTML = `<span>${types[0].type.name.toUpperCase()}</span>`;
+    } else {
+        typeText.innerHTML = `<span>${types[0].type.name.toUpperCase()}</span>
+                              <span>${types[1].type.name.toUpperCase()}</span>`;
+    }   
 
     // Display pokemon stats
     for (let i = 0; i < stats.length; i++) {
