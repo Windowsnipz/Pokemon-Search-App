@@ -99,6 +99,7 @@ main {
 
 .section {
     margin-top: 50px; /* margin below navbar */
+    margin-bottom: 50px;
 }
 
 .section h1, .section p {
@@ -121,6 +122,7 @@ main {
 }
 
 #input-div {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -165,6 +167,25 @@ main {
 }
 
 /* Table stuff */
+table {
+    display: flex;
+    justify-content: space-between;
+}
+
+th {
+    font-size: large;
+    padding-bottom: 10px;
+}
+
+td {
+    padding: 5px 40px;
+    margin: 10px 10px;
+}
+
+.stat {
+    background-color: var(--gray1);
+    border-radius: 10px;
+}
 
 /* Footer */
 footer {
